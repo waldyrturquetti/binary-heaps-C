@@ -21,18 +21,14 @@ void bottom_UP_Min(int v[], int n, int n1){
     for(int i=0;i<n1;i++){
 
         if(((meio*2 + 2) <= n1)){
-
-            //printf("carai\n");
+          
             if((v[meio] > v[meio*2 + 1]) || (v[meio] > v[meio*2 + 2])){
                 
-                //printf("carai1\n");
-                if(v[meio*2 + 1] < v[meio*2 + 2]){
-                    //printf("carai2\n");
+                if(v[meio*2 + 1] < v[meio*2 + 2]){                
                     troca(v, meio , meio*2+1);
                     meio=meio*2+1;
                 }
-                else{
-                    //printf("carai3\n");
+                else{                    
                     troca(v, meio , meio*2+2);
                     meio=meio*2+2;
                 }
@@ -66,18 +62,14 @@ void bottom_UP_Max(int v[], int n, int n1){
     for(int i=0;i<n1;i++){
 
         if(((meio*2 + 2) <= n1)){
-
-            //printf("carai\n");
+            
             if((v[meio] < v[meio*2 + 1]) || (v[meio] < v[meio*2 + 2])){
-                
-                //printf("carai1\n");
+                                
                 if(v[meio*2 + 1] > v[meio*2 + 2]){
-                    //printf("carai2\n");
                     troca(v, meio , meio*2+1);
                     meio=meio*2+1;
                 }
-                else{
-                    //printf("carai3\n");
+                else{                    
                     troca(v, meio , meio*2+2);
                     meio=meio*2+2;
                 }
@@ -117,10 +109,8 @@ void main(){
         printf("%d ", *(v+i));
 
     printf("\n");
-
-    //printf("vai a merda1\n");
-    bottom_UP_Max(v,n-1,n-1);
-    //printf("vai a merda2\n");
+    
+    bottom_UP_Max(v,n-1,n-1);   
 
     printf("Heap de Max:");
     for(int i=0;i<n;i++)
