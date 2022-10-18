@@ -196,7 +196,7 @@ void heapifyMin_Remove(TNO **raiz){
     return;    
 }
 
-void inserePilha(TPilha **Pilha, int chave){ //chave seria o lado , 0:esq e 1:dir
+void inserePilha(TPilha **Pilha, int chave){ //chave é o lado, 0:esq e 1:dir
 
     if(*Pilha == NULL){
         *Pilha = (TPilha*)malloc(sizeof(TPilha));
